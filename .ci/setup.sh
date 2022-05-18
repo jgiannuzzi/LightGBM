@@ -71,6 +71,8 @@ else  # Linux
         sudo apt-get install --no-install-recommends -y \
             libboost1.74-dev \
             ocl-icd-opencl-dev
+    fi
+    if [[ $TASK == "gpu" || $TASK == "bdist" ]] && [[ $(uname -m) == "x86_64" ]]; then
         cd $BUILD_DIRECTORY  # to avoid permission errors
         curl -sL -o AMD-APP-SDKInstaller.tar.bz2 https://github.com/microsoft/LightGBM/releases/download/v2.0.12/AMD-APP-SDKInstaller-v3.0.130.136-GA-linux64.tar.bz2
         tar -xjf AMD-APP-SDKInstaller.tar.bz2
