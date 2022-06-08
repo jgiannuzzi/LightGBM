@@ -45,8 +45,7 @@ jobs:
         PYTHON_VERSION: '3.7'
       bdist:
         TASK: bdist
-        # on Ubuntu 14.04, test_dual.py fails with newer version of Python
-        PYTHON_VERSION: '3.7'
+        PYTHON_VERSION: '3.8'
       inference:
         TASK: if-else
       mpi_source:
